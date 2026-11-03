@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShortsFlow Settings</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <h1>ShortsFlow</h1>
+        <p>Watch Seamlessly. Scroll Automatically.</p>
+    </div>
+
+    <div class="control-group">
+        <label for="autoScrollToggle" class="toggle-label">Enable Auto-Scroll</label>
+        <label class="switch">
+            <input type="checkbox" id="autoScrollToggle" checked>
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div class="control-group">
+        <label for="delaySlider" class="delay-label">
+            Scroll Delay: <span id="delayValue">2</span>s
+        </label>
+        <input type="range" id="delaySlider" min="0" max="5" step="1" value="2">
+    </div>
+
+    <div class="status" id="statusMessage">
+        Auto-scroll is active
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

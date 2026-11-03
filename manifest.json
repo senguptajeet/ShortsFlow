@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ShortsFlow - YouTube Auto Scroll",
+  "version": "1.0",
+  "description": "Watch Seamlessly. Scroll Automatically. Auto-scrolls to the next YouTube Short when the current one finishes.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ShortsFlow Settings"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/shorts/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
